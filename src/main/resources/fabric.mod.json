@@ -1,0 +1,17 @@
+{
+  "id": "fabritech",
+  "name": "FabriTech",
+  "description": "Attempt to make Minecraft bit more technical.",
+  "version": "0.0.1",
+  "side": "universal",
+  "initializers": [
+    "eu.rambox.fabritech.FabriTech"
+  ],
+  "requires": {
+    "fabric": "*"
+  },
+  "mixins": {
+    "client": "fabritech.client.json",
+    "common": "fabritech.common.json"
+  }
+}

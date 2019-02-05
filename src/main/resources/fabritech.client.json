@@ -1,0 +1,11 @@
+{
+  "required": true,
+  "package": "net.fabricmc.example.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+    "FabriTechMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
