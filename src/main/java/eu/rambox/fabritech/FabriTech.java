@@ -6,6 +6,7 @@ import net.fabricmc.api.ModInitializer;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Item;
 import net.minecraft.item.block.BlockItem;
+import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
@@ -17,18 +18,22 @@ public class FabriTech implements ModInitializer {
 
     @Override
     public void onInitialize() {
-        this.log("Initializing FabriTech mod.");
+        FabriTech.log("Initializing FabriTech mod.");
 
         // Registration
-        //FabriTechBlocks.registerBlocks();
+        FabriTech.log("Registering blocks.");
 
-        Registry.register(Registry.BLOCK, "copper_ore", FabriTechBlocks.COPPER_ORE);
-        Registry.register(Registry.ITEM, Registry.BLOCK.getId(FabriTechBlocks.COPPER_ORE), new BlockItem(FabriTechBlocks.COPPER_ORE, new Item.Settings().itemGroup(ItemGroup.BUILDING_BLOCKS)));
+        FabriTechBlocks.register();
 
+        // Add ores to generate
         FabriTechAdditionalBiomeFeatures.addBiomeFeatures();
     }
 
     public static void log(Object message) {
         LOGGER.log(Level.DEBUG, message.toString());
+    }
+
+    public static Identifier locate (String location) {
+        return new Identifier("fabritech", location);
     }
 }
