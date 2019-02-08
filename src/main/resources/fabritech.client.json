@@ -1,6 +1,6 @@
 {
   "required": true,
-  "package": "net.fabricmc.example.mixin",
+  "package": "eu.rambox.fabritech.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
     "FabriTechMixin"

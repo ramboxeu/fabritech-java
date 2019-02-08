@@ -11,6 +11,6 @@ import net.minecraft.client.MinecraftClient;
 public class FabriTechMixin {
   @Inject(at = @At("HEAD"), method = "init()V")
   private void init(CallbackInfo info) {
-    System.out.print("Initializing FabriTech mixin.");
+//    System.out.print("Initializing FabriTech mixin.");
   }
 }
