@@ -19,12 +19,12 @@ public class FabriTechBlocks {
 
     private static void register (Block block, String name)
     {
-        Registry.register(Registry.BLOCK, name, block);
-        Registry.register(Registry.ITEM, Registry.BLOCK.getId(block), new BlockItem(block, new Item.Settings().itemGroup(FabriTechItemGroups.FABRITECH_ALL)));
+        Registry.register(Registry.BLOCK, FabriTech.locate(name), block);
+        Registry.register(Registry.ITEM, FabriTech.locate(name), new BlockItem(block, new Item.Settings().itemGroup(FabriTechItemGroups.FABRITECH_ALL)));
     }
     private static void register (Block block, String name, ItemGroup itemGroup)
     {
-        Registry.register(Registry.BLOCK, name, block);
-        Registry.register(Registry.ITEM, Registry.BLOCK.getId(block), new BlockItem(block, new Item.Settings().itemGroup(itemGroup)));
+        Registry.register(Registry.BLOCK, FabriTech.locate(name), block);
+        Registry.register(Registry.ITEM, FabriTech.locate(name), new BlockItem(block, new Item.Settings().itemGroup(itemGroup)));
     }
 }
